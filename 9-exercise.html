@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <button class="js-9a">9a</button>
+
+    <button class="js-9b">9b</button>
+
+     <p>
+        <button onclick="clickHeads();"
+        >heads</button>
+
+        <button onclick="clickTails();"
+        >tails</button>
+     </p>
+
+     <p class="js-click"></p>
+
+
+     <input placeholder="Name" class="js-name" 
+     onkeydown=" handclickDown(event)">
+      
+     <button onclick="Submit();"
+     >Submit</button>
+
+     <p class="js-message"></p>
+
+
+    
+
+    <script>
+
+   document.querySelector('.js-9b').innerHTML = '9b done!';
+
+   function clickHeads() {
+    document.querySelector('.js-click').innerHTML = 'You chose: heads.';
+   }
+     
+   function clickTails () {
+    document.querySelector('.js-click').innerHTML = 'You chose: tails.';
+   }
+    
+
+
+   function Submit() {
+   const inputElement = document.querySelector('.js-name');
+   document.querySelector('.js-message').innerHTML = `Your name is : ${inputElement.value}`;
+   }
+    
+
+   function handclickDown (event) {
+    if (event.key === 'Enter') {
+    Submit();
+   }
+   }
+  
+   
+
+
+    </script>
+
+
+</body>
+</html>
