@@ -16,7 +16,7 @@
 <body>
 
     <script> 
-/*
+/*  
     const product = {
         name : 'socks' ,
         price : 1090
@@ -24,7 +24,9 @@
 
     console.log (product);
     console.log(product.name);
-    console.log(product.price);
+    console.log(product.price);  
+
+
 
     product.name =  'cotton socks';
     console.log(product);
@@ -34,9 +36,9 @@
 
     delete product.newProperty;
     console.log(product);
-    */
-
-    /*
+    
+*/
+    
     const product2 = {
      name : 'shirt',
     'delivery-time'  : '1 day',
@@ -45,7 +47,7 @@
         stars : 4.5,
         count : 87
     },
-    fun: function function1(){
+    fun: function function1(){                      //Js Object but only makes sense in Js
         console.log('function inside object');
     }
 
@@ -59,17 +61,23 @@
 
     console.log(product2.rating.count);
 
-    product2.fun();
+    product2.fun(); //displays function inside object
 
-    console.log(typeof console.log);
+    //console.log(typeof console.log);
 
-  console.log(JSON.stringify(product2));
+  console.log(JSON.stringify(product2)); // cconverts object product to JSON using JSON     syntax with "  "
+
+  console.log(typeof  JSON.stringify(product2)); // is a string
 
 
-    const jsonString = JSON.stringify(product2);
-   console.log(JSON.parse(jsonString));
-*/
+    const jsonString = JSON.stringify(product2); 
+   console.log(JSON.parse(jsonString)); // converts JSON string  to JS object with '  ' ...variable storage
 
+   //localStorage is permanent storage
+
+  
+
+/*
      console.log('hello'.length);
      console.log('hello'.toUpperCase());
 
@@ -112,7 +120,10 @@
         }
      };
      console.log(object5);
-     object5.method();
+     object5.method();   
+     
+     
+     /*
 
 
 

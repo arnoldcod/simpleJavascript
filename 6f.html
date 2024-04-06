@@ -10,18 +10,69 @@
 
 <body>
 
+
+   <p> Haids And Tails Game</p>
+
+   <button onclick="
+        playGame('Heads');
+      ">Heads</button>
+
+       
+
+   <button onclick="
+        playGame('Tails');
+   ">Tails</button>
+
+
+
     <script>
+       function playGame(playerMove) {
+     const computerMove =  pickComputerMove();
+     let result = '';
+      
 
+     if (playerMove === 'Heads') {
+      if (computerMove === 'Tails'){
+            result = 'You Win!';
+         }else {
+            result = 'Tie';
+         }
+     }
+
+       else if (playerMove === 'Tails') {
+        if (computerMove === 'Tails'){
+            result = 'Tie';
+         }else {
+            result ='You Lose';
+      }
+     } 
+       
+     alert (`You picked Tails. Computer picked ${computerMove}. ${result}`);
+}
+       
+
+      function pickComputerMove(){
+
+       const randomNumber = Math.random();
+         let computerMove = '';
+        
+         if (randomNumber<1/2 ){
+            computerMove = 'Heads';
+         }else {
+            computerMove = 'Tails';
+         }
+
+      return computerMove;
+
+      }
+/*
     const randomNumber = Math.random();
-
-    
     if (randomNumber < 0.5) {
        result = 'heads';
     } else {
        result = 'tails';
     }
 
-    
     let guess = 'heads';
 
      if (guess === result) {
@@ -29,8 +80,8 @@
      }
      else {console.log('You Lose!');
     }
-
-
+         */
+    
   
     </script>
 
