@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-   
-    <script>
 
         function addOne(array) {
             
@@ -24,9 +13,4 @@
         console.log(addOne([1,2,3]));
         console.log(addOne([-2,-1,0,99]));
 
-        
-
-    </script>
-
-</body>
-</html>
+   
